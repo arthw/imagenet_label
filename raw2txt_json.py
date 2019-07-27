@@ -8,7 +8,8 @@ with open("imagenet_1000.raw", "r") as f1:
     print(raw)
 
 with open("imagenet_1000.txt", "w") as f2:
-    f2.write("\n".join(raw))
+    for i in range(len(raw)):
+        f2.write("%d %s\n" % (i, raw[i]))
 
 
 with open("imagenet_1000.json", "w") as f3:
